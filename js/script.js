@@ -3,13 +3,13 @@ $(".header__burger").click(function(event) {
   $("body").toggleClass("lock");
 });
 
-function ibg() {
-  document.querySelectorAll(".ibg").forEach(el => {
-    if (el.querySelector("img")) {
-      el.style.backgroundImage =
-        "url(" + el.querySelector("img").getAttribute("src") + ")";
+function bg(){
+  let bg = document.querySelectorAll(".bg");
+  for (var i = 0; i < bg.length; i++) {
+  if(bg[i].querySelector('img')){
+    bg[i].style.backgroundImage = 'url('+bg[i].querySelector('img').getAttribute('src')+')';
     }
-  });
+  };
 }
 
-ibg();
+bg();
